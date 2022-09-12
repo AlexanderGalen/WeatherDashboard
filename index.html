@@ -19,58 +19,60 @@
         <aside class="city-search col-2">
             <h2 class="fs-4">Search for a City:</h2>
             <form class="search-form" action="javascript:void(0)">
-                <input class="search-input form-control mb-2" type="search">
-                <button class="btn btn-primary search-submit">Search</button>
+                <input class="search-input form-control mb-2" type="search" id="city-search">
+                <button class="btn btn-primary" id="city-search-submit">Search</button>
                 <hr/>
-                <button class="btn btn-secondary">Example City</button>
+                <section id="saved-cities">
+                    <!-- <button class="btn btn-secondary">Example City</button> -->
+                </section>
             </form>
         </aside>
 
         <main class="col-10">
             <section class="current-weather border rounded p-4">
-                <h2 class="mb-4"><span id="city-name">Example City</span> ( <span id="current-date">9/12/2022)</span><i class="weather-icon" id="today-weather-icon">☀</i></h2>
-                <p>Temp: 75°F</p>
-                <p>Wind: 6.5 MPH</p>
-                <p>Humidity: 80%</p>
-                <p>UV Index: <span class="uv-index p-2 bg-success text-white rounded">.55</span></p>
+                <h2 class="mb-4"><span id="city-name">Example City</span> (<span id="current-date">9/12/2022</span>)<i class="weather-icon" id="current-weather-icon">☀</i></h2>
+                <p>Temp: <span id="current-temp">75</span>°F</p>
+                <p>Wind: <span id="current-windspeed">6.5</span> MPH</p>
+                <p>Humidity: <span id="current-humidity">80</span>%</p>
+                <p>UV Index: <span id="uv-index" class="p-2 bg-success text-white rounded">.55</span></p>
             </section>
 
             <section class="5-day-forecast row">
                 <h3 class="p-4">5-Day Forecast</h3>
                 <section class="forecast col rounded p-4 mx-1 bg-info">
-                    <h4 class="forecast-date text-center mb-4">9/13/2022</h4>
-                    <p class="text-center"><i class="weather-icon fs-3">☀</i>
-                    <p>Temp: 80°F</p>
-                    <p>Wind: 15 MPH</p>
-                    <p>Humidity: 50%</p>
+                    <h4 id="day-1-date" class="forecast-date text-center mb-4">9/13/2022</h4>
+                    <p class="text-center"><i class="weather-icon fs-3" id="day-1-weather-icon">☀</i>
+                    <p>Temp: <span id="day-1-temp">80</span>°F</p>
+                    <p>Wind: <span id="day-1-windspeed">15</span> MPH</p>
+                    <p>Humidity: <span id="day-1-humidity">50</span>%</p>
                 </section>
                 <section class="forecast col rounded p-4 mx-1 bg-info">
-                    <h4 class="forecast-date text-center mb-4">9/13/2022</h4>
-                    <p class="text-center"><i class="weather-icon fs-3">☀</i>
-                    <p>Temp: 80°F</p>
-                    <p>Wind: 15 MPH</p>
-                    <p>Humidity: 50%</p>
+                    <h4 id="day-2-date" class="forecast-date text-center mb-4">9/13/2022</h4>
+                    <p class="text-center"><i class="weather-icon fs-3" id="day-2-weather-icon">☀</i>
+                    <p>Temp: <span id="day-2-temp">80</span>°F</p>
+                    <p>Wind: <span id="day-2-windspeed">15</span> MPH</p>
+                    <p>Humidity: <span id="day-2-humidity">50</span>%</p>
                 </section>
                 <section class="forecast col rounded p-4 mx-1 bg-info">
-                    <h4 class="forecast-date text-center mb-4">9/13/2022</h4>
-                    <p class="text-center"><i class="weather-icon fs-3">☀</i>
-                    <p>Temp: 80°F</p>
-                    <p>Wind: 15 MPH</p>
-                    <p>Humidity: 50%</p>
+                    <h4 id="day-3-date" class="forecast-date text-center mb-4">9/13/2022</h4>
+                    <p class="text-center"><i class="weather-icon fs-3" id="day-3-weather-icon">☀</i>
+                    <p>Temp: <span id="day-3-temp">80</span>°F</p>
+                    <p>Wind: <span id="day-3-windspeed">15</span> MPH</p>
+                    <p>Humidity: <span id="day-3-humidity">50</span>%</p>
                 </section>
                 <section class="forecast col rounded p-4 mx-1 bg-info">
-                    <h4 class="forecast-date text-center mb-4">9/13/2022</h4>
-                    <p class="text-center"><i class="weather-icon fs-3">☀</i>
-                    <p>Temp: 80°F</p>
-                    <p>Wind: 15 MPH</p>
-                    <p>Humidity: 50%</p>
+                    <h4 id="day-4-date" class="forecast-date text-center mb-4">9/13/2022</h4>
+                    <p class="text-center"><i class="weather-icon fs-3" id="day-4-weather-icon">☀</i>
+                    <p>Temp: <span id="day-4-temp">80</span>°F</p>
+                    <p>Wind: <span id="day-4-windspeed">15</span> MPH</p>
+                    <p>Humidity: <span id="day-4-humidity">50</span>%</p>
                 </section>
                 <section class="forecast col rounded p-4 mx-1 bg-info">
-                    <h4 class="forecast-date text-center mb-4">9/13/2022</h4>
-                    <p class="text-center"><i class="weather-icon fs-3">☀</i>
-                    <p>Temp: 80°F</p>
-                    <p>Wind: 15 MPH</p>
-                    <p>Humidity: 50%</p>
+                    <h4 id="day-5-date" class="forecast-date text-center mb-4">9/13/2022</h4>
+                    <p class="text-center"><i class="weather-icon fs-3" id="day-5-weather-icon">☀</i>
+                    <p>Temp: <span id="day-5-temp">80</span>°F</p>
+                    <p>Wind: <span id="day-5-windspeed">15</span> MPH</p>
+                    <p>Humidity: <span id="day-5-humidity">50</span>%</p>
                 </section>
             </section>
         </main>
